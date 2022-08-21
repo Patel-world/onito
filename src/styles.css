@@ -1,11 +1,10 @@
 .App {
+  padding: 2rem;
+  border: 10px groove;
   font-family: sans-serif;
   text-align: center;
 }
-div#root {
-  padding: 2rem;
-  border: 10px groove;
-}
+
 h1 {
   width: fit-content;
 }
@@ -67,4 +66,48 @@ label {
   background: red;
   /* Will place small red box on the right of input (positioning carries over) */
 
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+table {
+  margin-block-start: 3rem;
+}
+
+#root > div.App > form > div > div.grid > button:nth-child(1){
+  color: red;
+  border-color: red;
+}
+#root > div.App > form > div > div.grid > button:nth-child(2){
+  background-color: green;
+  color:#fff;
+}
+.important::after{
+  content: '*';
+  color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid3,.grid2,.g3 {
+    grid-template-columns: 1fr;
+}
+input,select {
+  width: 80vw;
+}
+.grid {
+  width: 80vw;
+}
 }
